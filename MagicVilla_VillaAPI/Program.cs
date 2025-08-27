@@ -1,7 +1,11 @@
+using MagicVilla_VillaAPI.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddDbContext<ApplicationDbContext>(option => {
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+});
 /////// Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

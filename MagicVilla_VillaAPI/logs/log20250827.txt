@@ -11,3 +11,73 @@
 2025-08-27 18:52:42.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7258/_vs/browserLink - 200 null text/javascript; charset=UTF-8 954.7726ms
 2025-08-27 18:52:42.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7258/swagger/v1/swagger.json - null null
 2025-08-27 18:52:42.674 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7258/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.5582ms
+2025-08-27 19:18:33.349 +03:00 [INF] Executed DbCommand (1,076ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Magic_VillaAPI];
+2025-08-27 19:18:33.674 +03:00 [INF] Executed DbCommand (279ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Magic_VillaAPI] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-08-27 19:18:33.705 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-27 19:18:33.793 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-08-27 19:18:33.795 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-27 19:18:33.810 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-27 19:18:33.823 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-27 19:18:33.838 +03:00 [INF] Applying migration '20250827161820_AddVillaTable'.
+2025-08-27 19:18:33.867 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Villas] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [CreatedTime] datetime2 NOT NULL,
+    [Details] nvarchar(max) NOT NULL,
+    [Rate] float NOT NULL,
+    [Sqft] int NOT NULL,
+    [Occupancy] int NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    [Amenity] nvarchar(max) NOT NULL,
+    [UpdatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Villas] PRIMARY KEY ([Id])
+);
+2025-08-27 19:18:33.886 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250827161820_AddVillaTable', N'8.0.19');
+2025-08-27 20:08:22.460 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-27 20:08:22.533 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-27 20:08:22.535 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-27 20:08:22.537 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-27 20:08:22.561 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-27 20:08:22.576 +03:00 [INF] Applying migration '20250827170805_SeedVillaTable'.
+2025-08-27 20:08:23.475 +03:00 [INF] Executed DbCommand (847ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Villas].[CreatedTime]', N'CreatedDate', N'COLUMN';
+2025-08-27 20:08:23.820 +03:00 [INF] Executed DbCommand (345ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Amenity', N'CreatedDate', N'Details', N'ImageUrl', N'Name', N'Occupancy', N'Rate', N'Sqft', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Villas]'))
+    SET IDENTITY_INSERT [Villas] ON;
+INSERT INTO [Villas] ([Id], [Amenity], [CreatedDate], [Details], [ImageUrl], [Name], [Occupancy], [Rate], [Sqft], [UpdatedDate])
+VALUES (1, N'', '2025-08-27T20:08:04.6085816+03:00', N'Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.', N'https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa3.jpg', N'Royal Villa', 4, 200.0E0, 550, '0001-01-01T00:00:00.0000000'),
+(2, N'', '2025-08-27T20:08:04.6085871+03:00', N'Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.', N'https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa1.jpg', N'Premium Pool Villa', 4, 300.0E0, 550, '0001-01-01T00:00:00.0000000'),
+(3, N'', '2025-08-27T20:08:04.6085874+03:00', N'Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.', N'https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa4.jpg', N'Luxury Pool Villa', 4, 400.0E0, 750, '0001-01-01T00:00:00.0000000'),
+(4, N'', '2025-08-27T20:08:04.6085878+03:00', N'Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.', N'https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa5.jpg', N'Diamond Villa', 4, 550.0E0, 900, '0001-01-01T00:00:00.0000000'),
+(5, N'', '2025-08-27T20:08:04.6085881+03:00', N'Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.', N'https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa2.jpg', N'Diamond Pool Villa', 4, 600.0E0, 1100, '0001-01-01T00:00:00.0000000');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Amenity', N'CreatedDate', N'Details', N'ImageUrl', N'Name', N'Occupancy', N'Rate', N'Sqft', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Villas]'))
+    SET IDENTITY_INSERT [Villas] OFF;
+2025-08-27 20:08:23.823 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250827170805_SeedVillaTable', N'8.0.19');
