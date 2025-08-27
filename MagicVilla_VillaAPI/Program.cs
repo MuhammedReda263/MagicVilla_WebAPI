@@ -1,7 +1,16 @@
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+/////// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+////////////////////////////////////////////////
+builder.Host.UseSerilog();
 
+// Add services to the container.
 builder.Services.AddControllers(option => {
     option.ReturnHttpNotAcceptable = true; //If client sent acceptable not supported by us returned notAcceptable
 }).AddXmlDataContractSerializerFormatters();

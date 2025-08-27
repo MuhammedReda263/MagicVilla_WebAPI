@@ -30,3 +30,17 @@ C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\r
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\MagicVilla_VillaAPI.pdb
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\MagicVilla_VillaAPI.genruntimeconfig.cache
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\ref\MagicVilla_VillaAPI.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Sinks.File.dll

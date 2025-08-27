@@ -1,0 +1,13 @@
+2025-08-27 18:52:39.938 +03:00 [INF] Now listening on: https://localhost:7258
+2025-08-27 18:52:39.982 +03:00 [INF] Now listening on: http://localhost:5230
+2025-08-27 18:52:40.064 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-27 18:52:40.066 +03:00 [INF] Hosting environment: Development
+2025-08-27 18:52:40.068 +03:00 [INF] Content root path: C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI
+2025-08-27 18:52:41.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7258/swagger/index.html - null null
+2025-08-27 18:52:41.493 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7258/swagger/index.html - 200 null text/html;charset=utf-8 420.0547ms
+2025-08-27 18:52:41.541 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7258/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-27 18:52:41.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7258/_vs/browserLink - null null
+2025-08-27 18:52:41.557 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7258/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.4211ms
+2025-08-27 18:52:42.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7258/_vs/browserLink - 200 null text/javascript; charset=UTF-8 954.7726ms
+2025-08-27 18:52:42.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7258/swagger/v1/swagger.json - null null
+2025-08-27 18:52:42.674 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7258/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.5582ms
