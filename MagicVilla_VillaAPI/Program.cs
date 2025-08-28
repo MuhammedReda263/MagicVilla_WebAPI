@@ -1,3 +1,4 @@
+using MagicVilla_VillaAPI;
 using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -6,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(option => {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
+/////// Configure AutoMapper
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+/////////
+
 /////// Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -16,7 +21,7 @@ builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllers(option => {
-    option.ReturnHttpNotAcceptable = true; //If client sent acceptable not supported by us returned notAcceptable
+    //option.ReturnHttpNotAcceptable = true; //If client sent acceptable not supported by us returned notAcceptable
 }).AddXmlDataContractSerializerFormatters();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

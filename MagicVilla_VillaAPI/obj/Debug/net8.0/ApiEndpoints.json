@@ -30,8 +30,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "villaDTO",
-        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaDTO",
+        "Name": "createDTO",
+        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaCreateDTO",
         "IsRequired": true
       }
     ],
@@ -173,8 +173,8 @@
         "IsRequired": true
       },
       {
-        "Name": "villaDTO",
-        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaDTO",
+        "Name": "updateDTO",
+        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -213,7 +213,7 @@
       },
       {
         "Name": "patchDTO",
-        "Type": "Microsoft.AspNetCore.JsonPatch.JsonPatchDocument\u00601[[MagicVilla_VillaAPI.Modles.DTOs.VillaDTO, MagicVilla_VillaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Microsoft.AspNetCore.JsonPatch.JsonPatchDocument\u00601[[MagicVilla_VillaAPI.Modles.DTOs.VillaUpdateDTO, MagicVilla_VillaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
