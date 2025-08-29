@@ -1,7 +1,10 @@
 using MagicVilla_VillaAPI;
 using MagicVilla_VillaAPI.Data;
+using MagicVilla_VillaAPI.Repository.IRepostiory;
+using MagicVilla_VillaAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using MagicVilla_VillaAPI.Modles;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(option => {
@@ -18,6 +21,10 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 ////////////////////////////////////////////////
 builder.Host.UseSerilog();
+
+builder.Services.AddScoped<IVillaRepository, VillaRepository>();
+builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
+builder.Services.AddScoped<APIResponse>();
 
 // Add services to the container.
 builder.Services.AddControllers(option => {

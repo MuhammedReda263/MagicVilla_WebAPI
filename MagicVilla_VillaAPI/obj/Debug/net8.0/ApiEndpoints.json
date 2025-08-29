@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MagicVilla_VillaAPI.Modles.DTOs.VillaDTO, MagicVilla_VillaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -37,7 +37,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaDTO",
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -81,7 +81,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaDTO",
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -113,7 +113,8 @@
         ],
         "StatusCode": 404
       }
-    ]
+    ],
+    "EndpointName": "GetVilla"
   },
   {
     "ContainingType": "MagicVilla_VillaAPI.Controllers.VillaAPIController",
@@ -236,5 +237,218 @@
       }
     ],
     "EndpointName": "UpdatePartialVilla"
+  },
+  {
+    "ContainingType": "MagicVilla_VillaAPI.Controllers.VillaNumberAPIController",
+    "Method": "GetVillaNumbers",
+    "RelativePath": "api/VillaNumberAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_VillaAPI.Controllers.VillaNumberAPIController",
+    "Method": "CreateVillaNumber",
+    "RelativePath": "api/VillaNumberAPI",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDTO",
+        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaNumberCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_VillaAPI.Controllers.VillaNumberAPIController",
+    "Method": "GetVillaNumber",
+    "RelativePath": "api/VillaNumberAPI/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 404
+      }
+    ],
+    "EndpointName": "GetVillaNumber"
+  },
+  {
+    "ContainingType": "MagicVilla_VillaAPI.Controllers.VillaNumberAPIController",
+    "Method": "DeleteVillaNumber",
+    "RelativePath": "api/VillaNumberAPI/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "EndpointName": "DeleteVillaNumber"
+  },
+  {
+    "ContainingType": "MagicVilla_VillaAPI.Controllers.VillaNumberAPIController",
+    "Method": "UpdateVillaNumber",
+    "RelativePath": "api/VillaNumberAPI/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDTO",
+        "Type": "MagicVilla_VillaAPI.Modles.DTOs.VillaNumberUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaAPI.Modles.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "EndpointName": "UpdateVillaNumber"
   }
 ]
