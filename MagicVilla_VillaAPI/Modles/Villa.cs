@@ -8,7 +8,8 @@ namespace MagicVilla_VillaAPI.Modles
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Name { get; set; } = default!;
+		[Required]
+		public string Name { get; set; } = default!;
         public DateTime CreatedDate { get; set; }
         public string Details { get; set; }
         public double Rate { get; set; }
