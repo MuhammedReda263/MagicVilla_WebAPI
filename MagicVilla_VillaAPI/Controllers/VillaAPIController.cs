@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Asp.Versioning;
+using AutoMapper;
 using MagicVilla_VillaAPI.Data;
 using MagicVilla_VillaAPI.Modles;
 using MagicVilla_VillaAPI.Modles.DTOs;
@@ -12,8 +13,9 @@ using System.Net;
 
 namespace MagicVilla_VillaAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class VillaAPIController(ILogger<VillaAPIController> _logger, IMapper _mapper, IVillaRepository _dbVilla, APIResponse _response) : ControllerBase
     {
 

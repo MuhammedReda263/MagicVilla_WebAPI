@@ -159,3 +159,7 @@ C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\r
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\MagicVilla_VillaAPI.pdb
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\MagicVilla_VillaAPI.genruntimeconfig.cache
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\ref\MagicVilla_VillaAPI.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Asp.Versioning.Http.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll

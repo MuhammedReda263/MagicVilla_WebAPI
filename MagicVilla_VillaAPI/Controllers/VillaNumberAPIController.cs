@@ -5,11 +5,13 @@ using MagicVilla_VillaAPI.Repository.IRepostiory;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
+using Asp.Versioning;
 
 namespace MagicVilla_VillaAPI.Controllers
 {
-    [Route("api/VillaNumberAPI")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class VillaNumberAPIController : ControllerBase
     {
         protected APIResponse _response;
@@ -23,7 +25,6 @@ namespace MagicVilla_VillaAPI.Controllers
             this._response = new();
             _dbVilla = dbVilla;
         }
-
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -47,6 +48,7 @@ namespace MagicVilla_VillaAPI.Controllers
             return _response;
 
         }
+
 
         [HttpGet("{id:int}", Name = "GetVillaNumber")]
         [ProducesResponseType(StatusCodes.Status200OK)]

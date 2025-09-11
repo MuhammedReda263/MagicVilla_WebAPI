@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Asp.Versioning;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(option => {
@@ -90,9 +91,27 @@ builder.Services.AddSwaggerGen(options => {
         }
     });
 
+    ////////// for swagger doc ///////////////////////
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "My API V1", Version = "v1" });
+    options.SwaggerDoc("v2", new OpenApiInfo { Title = "My API V2", Version = "v2" });
+    /////////////////////////////////////////////
+
 });
 /////////////////////////////////
 
+
+////////// Versioning ///////////////////
+
+builder.Services.AddApiVersioning(options => {
+    options.DefaultApiVersion = new ApiVersion(2, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+}).AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+});
+/////////////////////////////////////////////
 
 var app = builder.Build();
 
@@ -101,6 +120,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseSwaggerUI(options => {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Magic_VillaV1");
+        options.SwaggerEndpoint("/swagger/v2/swagger.json", "Magic_VillaV2");
+    });
 }
 
 app.UseHttpsRedirection();
