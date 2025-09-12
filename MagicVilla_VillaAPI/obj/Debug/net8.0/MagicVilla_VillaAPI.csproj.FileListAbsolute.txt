@@ -163,3 +163,8 @@ C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\r
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\MagicVilla_VillaAPI.pdb
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\MagicVilla_VillaAPI.genruntimeconfig.cache
 C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\obj\Debug\net8.0\ref\MagicVilla_VillaAPI.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Muhammed Reda\Desktop\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
