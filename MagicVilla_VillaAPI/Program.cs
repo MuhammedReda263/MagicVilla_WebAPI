@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(option => {
@@ -48,7 +49,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 ////////////////////////////////////////////////
 builder.Host.UseSerilog();
-
+builder.Services.AddResponseCaching();
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
 builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -56,6 +57,12 @@ builder.Services.AddScoped<APIResponse>();
 
 // Add services to the container.
 builder.Services.AddControllers(option => {
+    //General caching
+    option.CacheProfiles.Add("Default30",
+       new CacheProfile()
+       {
+           Duration = 30
+       });
     //option.ReturnHttpNotAcceptable = true; //If client sent acceptable not supported by us returned notAcceptable
 }).AddXmlDataContractSerializerFormatters();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
